@@ -1,5 +1,7 @@
 # Validation with Form Inputs in ReactJS
 
+In this example repo I will try to explain how to make form manipulation in React easier by using a stateful input controller.
+
 Validation of forms in react is a bit cumbersome especially for someone used to easy form handling in AngularJS. With two-way data binding and form utilities of Angular, form validation is quite trivial in Angular. However that was not the case for me using React as you need to keep track of state of form inputs yourself.
 
 For example you need to keep track of focused and touched state of your input field. In addition to that you need to keep the value of your state too. For a multi field value this turns into a lots of state variables which makes it quite difficult to keep track of state in your application. 
@@ -143,6 +145,7 @@ For showing errors `renderLabel` and `validate` methods are used. In each render
         return <ControlLabel bsClass={labelClass}>{subView}</ControlLabel>
     }
 
-So by wrapping the state of input in a controlled component it is possible to have form manipulation with validation messages in React without having an enormous parent controller. What do you think of this approach, if you have any suggestions please let me know through comments. You can find the example project from github repo.
+So by wrapping the state of input in a controlled component it is possible to have form manipulation with validation messages in React without having an enormous parent controller. What do you think of this approach, if you have any suggestions please let me know. You can find the example project from github repo.
+As each application has its own requirements you can change your view by using different styles or components in your input component, or by changing displaying message policy by changing `errorsCanBeDisplayed` method.
 
 Cheers
