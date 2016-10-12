@@ -7,19 +7,25 @@ import {ControlLabel, FormControl, FormGroup} from "react-bootstrap";
 class FormInputWithValidation extends React.Component {
     constructor(props, context, ...args) {
         super(props, context, ...args);
-        this.state = this.propsToState(props);
-    }
-
-    propsToState(props) {
         let {value, isFocused, isDirty} = this.props;
-        return {value, isFocused, isDirty};
+        this.state = {value, isFocused, isDirty};
     }
 
     componentWillReceiveProps(nextProps) {
         let {value, isFocused, isDirty} = this.props;
         let {value: nextValue, isFocused: nextIsFocused, isDirty: nextIsDirty} = nextProps;
         if (value !== nextValue || isFocused !== nextIsFocused || isDirty !== nextIsDirty) {
-            this.setState({state: this.propsToState(nextProps)});
+            let nextState = {};
+            if (value !== nextValue) {
+                nextState.value = nextValue;
+            }
+            if (value !== isFocused) {
+                nextState.isFocused = nextIsFocused;
+            }
+            if (value !== isDirty) {
+                nextState.isDirty = nextIsDirty;
+            }
+            this.setState(nextState);
         }
     }
 
