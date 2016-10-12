@@ -145,7 +145,7 @@ For showing errors `renderLabel` and `validate` methods are used. In each render
         return <ControlLabel bsClass={labelClass}>{subView}</ControlLabel>
     }
 
-So by wrapping the state of input in a controlled component it is possible to have form manipulation with validation messages in React without having an enormous parent controller. What do you think of this approach, if you have any suggestions please let me know. You can find the example project from github repo.
-As each application has its own requirements you can change your view by using different styles or components in your input component, or by changing displaying message policy by changing `errorsCanBeDisplayed` method.
+So by wrapping the state of input in a controlled component it is possible to have form manipulation with validation messages in React without having a gigantic parent controller. Also as each application has its own requirements you can change your view by using different styles or components in your input component, or by changing errorsCanBeDisplayed method you can change your displaying error policy.
+What do you think of this approach, if you have any suggestions please let me know.
 
 Cheers
