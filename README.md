@@ -82,7 +82,7 @@ Lets check our `render` method:
         </FormGroup>
     }
     
-It uses the value of its state for input control. We extended `FormControl` using `...otherProps`by using spread operator of ES6. We implemented our `onBlur`, `onFocus` and `onChange` event for this component and in these methods we update `value`, `isFocused`, `isDirty` of our state. Let's take a look at `onInputChanged` method of our component:
+It uses the value of its state for input control. We extended `FormControl` using `...otherProps`by using rest parameters of ES6. We implemented our `onBlur`, `onFocus` and `onChange` event for this component and in these methods we update `value`, `isFocused`, `isDirty` of our state. Let's take a look at `onInputChanged` method of our component:
     
     onInputChanged(e) {
         let value = this.eventToValue(e);
